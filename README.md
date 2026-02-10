@@ -43,7 +43,7 @@ Example: `40/16>1800-320` means:
 maxValue /  minValue >  maxViewport -  minViewport
    40    /     16    >    1800      -     320
    ↓           ↓           ↓               ↓
-max size    min size    max width      min width
+max size /  min size >  max width   -  min width
 ```
 
 **Space & Enter**
