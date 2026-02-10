@@ -6,7 +6,7 @@ const Process = require('./process.js');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-  const config = vscode.workspace.getConfiguration('CSSResponsive');
+  const config = vscode.workspace.getConfiguration('CSSResponsiveHelper');
   const process = new Process(config);
   const provider = new Provider(process);
 
@@ -35,8 +35,8 @@ function activate(context) {
   // Handle configuration changes
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration(e => {
-      if (e.affectsConfiguration('CSSResponsive')) {
-        const newConfig = vscode.workspace.getConfiguration('CSSResponsive');
+      if (e.affectsConfiguration('CSSResponsiveHelper')) {
+        const newConfig = vscode.workspace.getConfiguration('CSSResponsiveHelper');
         process.config = newConfig;
       }
     })

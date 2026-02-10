@@ -46,10 +46,10 @@ Example: `40/16>1800-320` means:
 
 **Syntax explanation:**
 ```
-maxValue/minValue>maxViewport-minViewport
-   40   /   16  >  1800   -   320
-   ↓        ↓      ↓           ↓
-max size min size max width min width
+maxValue /  minValue >  maxViewport -  minViewport
+   40    /     16    >    1800      -     320
+   ↓           ↓           ↓               ↓
+max size    min size    max width      min width
 ```
 
 **Space & Enter**
