@@ -1,0 +1,36 @@
+# Test files
+test-examples/
+
+# Node modules
+node_modules/
+
+# VSCode
+.vscode/
+*.vsix
+extension.vsixmanifest
+[Content_Types].xml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+out/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+.cache/
+
+PUBLISHING.md
+COMPATIBILITY.md

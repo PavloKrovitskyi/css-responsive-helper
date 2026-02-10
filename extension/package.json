@@ -1,0 +1,92 @@
+{
+  "name": "css-responsive-helper-pk",
+  "displayName": "CSS Responsive Helper",
+  "description": "Quick conversion of divisions to rem/percent/em and fluid responsive clamp() for CSS",
+  "version": "0.1.0",
+  "publisher": "Pavlo-K",
+  "author": {
+    "name": "Pavlo Krovitskyi"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PavloKrovitskyi/css-responsive-helper"
+  },
+  "bugs": {
+    "url": "https://github.com/PavloKrovitskyi/css-responsive-helper"
+  },
+  "keywords": [
+    "css",
+    "responsive",
+    "clamp",
+    "fluid",
+    "rem",
+    "percent",
+    "converter",
+    "autocomplete",
+    "snippets",
+    "cursor",
+    "vscode-compatible"
+  ],
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:vue",
+    "onLanguage:css",
+    "onLanguage:less",
+    "onLanguage:scss",
+    "onLanguage:sass",
+    "onLanguage:stylus"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "CSS Responsive Helper",
+      "properties": {
+        "CSSResponsiveHelper.comments": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add the division as commentary, default: true (true - add commentary, false - do not add commentary)"
+        },
+        "CSSResponsiveHelper.fixedDigits": {
+          "type": "number",
+          "default": 4,
+          "description": "Define the number of decimals for rem/em, default: 4"
+        },
+        "CSSResponsiveHelper.fixedDigitsNatural": {
+          "type": "number",
+          "default": 3,
+          "description": "Define the number of decimals for natural values, default: 3"
+        }
+      }
+    }
+  },
+  "main": "./extension.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.33.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.2"
+  }
+}
