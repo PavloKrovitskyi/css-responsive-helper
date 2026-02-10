@@ -9,10 +9,7 @@ Quick conversion of divisions to **rem**, **percent**, **em** and **fluid respon
 ### 🎯 Division Conversion
 Convert simple divisions to various CSS units with autocomplete:
 
-```css
-/* Type: 16/1920 */
-width: 0.0083rem; /* 16/1920 */
-```
+![Division Conversion Demo](calculation.gif)
 
 **Available conversions:**
 - `rem` - for responsive sizing
@@ -23,10 +20,7 @@ width: 0.0083rem; /* 16/1920 */
 ### 🚀 Fluid Responsive Clamp
 Create fluid responsive values using CSS `clamp()` function:
 
-```css
-/* Type: 40/16>1800-320 then space + Enter */
-font-size: clamp(1rem, 0.6757rem + 1.6216vw, 2.5rem); /* 40/16>1800-320 */
-```
+![Fluid Clamp Demo](clamp-negative.gif)
 
 **Syntax:** `maxValue/minValue>maxViewport-minViewport`
 
@@ -71,9 +65,9 @@ This creates a fluid size that smoothly transitions from 40px (at 1800px viewpor
 
 ## Extension Settings
 
-- `CSSResponsive.comments` (default: `true`) - Add the formula as comment
-- `CSSResponsive.fixedDigits` (default: `4`) - Decimal precision for rem/em
-- `CSSResponsive.fixedDigitsNatural` (default: `3`) - Decimal precision for natural values
+- `CSSResponsiveHelper.comments` (default: `true`) - Add the formula as comment
+- `CSSResponsiveHelper.fixedDigits` (default: `4`) - Decimal precision for rem/em
+- `CSSResponsiveHelper.fixedDigitsNatural` (default: `3`) - Decimal precision for natural values
 
 ## Examples
 
