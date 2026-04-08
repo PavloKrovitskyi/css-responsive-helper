@@ -7,17 +7,20 @@ Quick conversion of divisions to **rem**, **percent**, **em** and **fluid respon
 ## Features
 
 ### 🎯 Division Conversion
+
 Convert simple divisions to various CSS units with autocomplete:
 
 ![Division Conversion Demo](calculation.gif)
 
 **Available conversions:**
+
 - `rem` - for responsive sizing
 - `%` - for percentage-based layouts
 - `natural` - decimal values
 - `em` - relative to font size
 
 ### 🚀 Fluid Responsive Clamp
+
 Create fluid responsive values using CSS `clamp()` function:
 
 ![Fluid Clamp Demo](clamp-negative.gif)
@@ -25,6 +28,7 @@ Create fluid responsive values using CSS `clamp()` function:
 **Syntax:** `maxValue/minValue>maxViewport-minViewport`
 
 Example: `40/16>1800-320` means:
+
 - Size transitions from **40px** (at 1800px viewport) to **16px** (at 320px viewport)
 - Automatically calculates the perfect clamp() formula
 
@@ -39,6 +43,7 @@ Example: `40/16>1800-320` means:
 ### Clamp Generation
 
 **Syntax explanation:**
+
 ```
 maxValue /  minValue >  maxViewport -  minViewport
    40    /     16    >    1800      -     320
@@ -47,6 +52,7 @@ max size /  min size >  max width   -  min width
 ```
 
 **Space & Enter**
+
 1. Type: `40/16>1800-320 `
 2. Press **Space**
 3. Press **Enter** to select clamp
@@ -68,25 +74,43 @@ This creates a fluid size that smoothly transitions from 40px (at 1800px viewpor
 - `CSSResponsiveHelper.comments` (default: `true`) - Add the formula as comment
 - `CSSResponsiveHelper.fixedDigits` (default: `4`) - Decimal precision for rem/em
 - `CSSResponsiveHelper.fixedDigitsNatural` (default: `3`) - Decimal precision for natural values
+- `CSSResponsiveHelper.unitOrder` (default: `["clamp", "rem", "percent", "natural", "em"]`) - Define the order of unit options in completion suggestions. Available units: clamp, rem, percent, natural, em
+
+### Custom Unit Order Example
+
+To customize the order of unit suggestions, add this to your VS Code settings JSON:
+
+```json
+{
+	"CSSResponsiveHelper.unitOrder": ["natural", "rem", "em", "percent", "clamp"]
+}
+```
 
 ## Examples
 
 ### Simple Division
+
 ```css
 /* Type: 420/1920 */
 width: 21.875%; /* 420/1920 */
 ```
 
 ### Fluid Typography
+
 ```css
 /* Type: 48/24>1920-320  */
 font-size: clamp(1.5rem, 1.2973rem + 1.0135vw, 3rem); /* 48/24>1920-320 */
 ```
 
 ### Negative Values
+
 ```css
 /* Type: 60/-30>1800-320  */
-margin-left: clamp(-1.875rem, -3.0912rem + 6.0811vw, 3.75rem); /* 60/-30>1800-320 */
+margin-left: clamp(
+	-1.875rem,
+	-3.0912rem + 6.0811vw,
+	3.75rem
+); /* 60/-30>1800-320 */
 ```
 
 ## Requirements
