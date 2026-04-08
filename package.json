@@ -2,7 +2,7 @@
 	"name": "css-responsive-helper-pk",
 	"displayName": "CSS Responsive Helper",
 	"description": "Quick conversion of divisions to rem/percent/em and fluid responsive clamp() for CSS",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "Pavlo-K",
 	"author": {
 		"name": "Pavlo Krovitskyi"
