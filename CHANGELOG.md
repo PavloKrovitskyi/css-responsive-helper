@@ -5,6 +5,7 @@ All notable changes to the "CSS Responsive Helper" extension.
 ## [0.1.3] - 2026-05-31
 
 ### Changed
+
 - `CSSResponsiveHelper.comments` default changed to `false` — comments are now opt-in for regular conversions
 - Clamp always includes the formula comment, regardless of `CSSResponsiveHelper.comments` setting
 - `CSSResponsiveHelper.comments` only controls comments for regular conversions (rem, %, natural, em)
@@ -12,6 +13,7 @@ All notable changes to the "CSS Responsive Helper" extension.
 ## [0.1.0] - 2026-02-10
 
 ### Added
+
 - Initial release
 - Division to rem/percent/em/natural conversion
 - Fluid responsive clamp() generation
@@ -21,6 +23,7 @@ All notable changes to the "CSS Responsive Helper" extension.
 - Optional formula comments
 
 ### Features
+
 - **Division Conversion**: `16/1920` → various units
 - **Clamp Generation**: `40/16>1800-320` → fluid responsive clamp()
 - Supports negative values
@@ -29,6 +32,7 @@ All notable changes to the "CSS Responsive Helper" extension.
 - Space or Ctrl+Space activation
 
 ### Configuration
+
 - `CSSResponsive.comments` - Toggle formula comments
 - `CSSResponsive.fixedDigits` - Decimal precision for rem/em
 - `CSSResponsive.fixedDigitsNatural` - Decimal precision for natural values

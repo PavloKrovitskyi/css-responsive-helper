@@ -59,22 +59,14 @@ max size /  min size >  max width   -  min width
 
 This creates a fluid size that smoothly transitions from 40px (at 1800px viewport) down to 16px (at 320px viewport).
 
-## Supported File Types
-
-- CSS
-- SCSS
-- Sass
-- Less
-- Stylus
-- HTML (inline styles)
-- Vue (style section)
-
 ## Extension Settings
 
-- `CSSResponsiveHelper.comments` (default: `false`) - Add the formula as comment for regular conversions (rem, %, natural, em). Clamp always includes the comment regardless of this setting.
+- `CSSResponsiveHelper.comments` (default: `false`) - Add the formula as comment for regular conversions (rem, %, natural, em). Clamp always
+  includes the comment regardless of this setting.
 - `CSSResponsiveHelper.fixedDigits` (default: `4`) - Decimal precision for rem/em
 - `CSSResponsiveHelper.fixedDigitsNatural` (default: `3`) - Decimal precision for natural values
-- `CSSResponsiveHelper.unitOrder` (default: `["clamp", "rem", "percent", "natural", "em"]`) - Define the order of unit options in completion suggestions. Available units: clamp, rem, percent, natural, em
+- `CSSResponsiveHelper.unitOrder` (default: `["clamp", "rem", "percent", "natural", "em"]`) - Define the order of unit options in completion
+  suggestions. Available units: clamp, rem, percent, natural, em
 
 ### Custom Unit Order Example
 
@@ -82,7 +74,7 @@ To customize the order of unit suggestions, add this to your VS Code settings JS
 
 ```json
 {
-	"CSSResponsiveHelper.unitOrder": ["natural", "rem", "em", "percent", "clamp"]
+  "CSSResponsiveHelper.unitOrder": ["natural", "rem", "em", "percent", "clamp"]
 }
 ```
 
@@ -106,12 +98,18 @@ font-size: clamp(1.5rem, 1.2973rem + 1.0135vw, 3rem); /* 48/24>1920-320 */
 
 ```css
 /* Type: 60/-30>1800-320  */
-margin-left: clamp(
-	-1.875rem,
-	-3.0912rem + 6.0811vw,
-	3.75rem
-); /* 60/-30>1800-320 */
+margin-left: clamp(-1.875rem, -3.0912rem + 6.0811vw, 3.75rem); /* 60/-30>1800-320 */
 ```
+
+## Supported File Types
+
+- CSS
+- SCSS
+- Sass
+- Less
+- Stylus
+- HTML (inline styles)
+- Vue (style section)
 
 ## Requirements
 

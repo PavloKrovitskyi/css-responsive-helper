@@ -10,21 +10,13 @@ function activate(context) {
   const process = new Process(config);
   const provider = new Provider(process);
 
-  const TYPES = [
-    'html',
-    'vue',
-    'css',
-    'less',
-    'scss',
-    'sass',
-    'stylus'
-  ];
+  const TYPES = ['html', 'vue', 'css', 'less', 'scss', 'sass', 'stylus'];
 
-  TYPES.forEach(item => {
+  TYPES.forEach((item) => {
     let providerDisposable = vscode.languages.registerCompletionItemProvider(
       {
         scheme: 'file',
-        language: item
+        language: item,
       },
       provider,
       ...['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'x', '>', ' ']
@@ -34,7 +26,7 @@ function activate(context) {
 
   // Handle configuration changes
   context.subscriptions.push(
-    vscode.workspace.onDidChangeConfiguration(e => {
+    vscode.workspace.onDidChangeConfiguration((e) => {
       if (e.affectsConfiguration('CSSResponsiveHelper')) {
         const newConfig = vscode.workspace.getConfiguration('CSSResponsiveHelper');
         process.config = newConfig;
@@ -46,9 +38,9 @@ function activate(context) {
 exports.activate = activate;
 
 // this method is called when your extension is deactivated
-function deactivate() { }
+function deactivate() {}
 
 module.exports = {
   activate,
-  deactivate
-}
+  deactivate,
+};
