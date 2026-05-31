@@ -2,7 +2,7 @@
 	"name": "css-responsive-helper-pk",
 	"displayName": "CSS Responsive Helper",
 	"description": "Quick conversion of divisions to rem/percent/em and fluid responsive clamp() for CSS",
-	"version": "0.1.1",
+	"version": "0.1.3",
 	"publisher": "Pavlo-K",
 	"author": {
 		"name": "Pavlo Krovitskyi"
@@ -50,8 +50,8 @@
 			"properties": {
 				"CSSResponsiveHelper.comments": {
 					"type": "boolean",
-					"default": true,
-					"description": "Add the division as commentary, default: true (true - add commentary, false - do not add commentary)"
+					"default": false,
+					"description": "Add the division as commentary for regular conversions (rem, %, natural, em). Clamp always includes the comment regardless of this setting. default: false"
 				},
 				"CSSResponsiveHelper.fixedDigits": {
 					"type": "number",

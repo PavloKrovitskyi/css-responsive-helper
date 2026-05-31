@@ -91,7 +91,7 @@ module.exports = class Process {
   getResultText(percent, language, insertText, suffix = '', isClamp = false) {
     var resultText = isClamp ? `${percent};` : `${percent.toString()}${suffix};`;
 
-    if (this.config.comments) {
+    if (isClamp || this.config.comments) {
       resultText += ` /* ${insertText} */`;
     }
     return this.handleSyntaxLanguage(resultText, language);

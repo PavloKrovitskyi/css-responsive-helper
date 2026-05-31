@@ -71,7 +71,7 @@ This creates a fluid size that smoothly transitions from 40px (at 1800px viewpor
 
 ## Extension Settings
 
-- `CSSResponsiveHelper.comments` (default: `true`) - Add the formula as comment
+- `CSSResponsiveHelper.comments` (default: `false`) - Add the formula as comment for regular conversions (rem, %, natural, em). Clamp always includes the comment regardless of this setting.
 - `CSSResponsiveHelper.fixedDigits` (default: `4`) - Decimal precision for rem/em
 - `CSSResponsiveHelper.fixedDigitsNatural` (default: `3`) - Decimal precision for natural values
 - `CSSResponsiveHelper.unitOrder` (default: `["clamp", "rem", "percent", "natural", "em"]`) - Define the order of unit options in completion suggestions. Available units: clamp, rem, percent, natural, em
